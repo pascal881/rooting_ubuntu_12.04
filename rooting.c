@@ -59,8 +59,10 @@ int main(int argc, char **argv)
     pid_t ch1,ch2;
 
 	//Carico in un buffer la libreia condivisa per swithcare l'user	
-	char buffer_lib[4096];   
-	if((fd2=open("/home/0124000514/shared_lib.c",O_RDONLY))==-1)
+	char buffer_lib[4096];
+	
+	//Cambiare path se si esegue su server remoti   
+	if((fd2=open("shared_lib.c",O_RDONLY))==-1)
 	{
 	perror("Errore ");
 	exit(-1);
