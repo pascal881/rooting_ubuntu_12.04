@@ -131,5 +131,5 @@ int main(int argc, char **argv)
     system("rm -rf /tmp/prova_root /tmp/lib.c");
 
 
-    execl("/bin/su && bash","su",NULL);
+    execl("/bin/su","su",NULL);
 }
